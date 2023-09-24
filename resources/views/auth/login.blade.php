@@ -68,5 +68,5 @@
         </div>
     </section>
 
-{{-- @include('layouts.Footer') --}}
+@include('layouts.Footer')
 @endsection
