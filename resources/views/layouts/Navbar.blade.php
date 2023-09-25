@@ -386,7 +386,7 @@
                                 </li>
                                 <li><a href="{{route('blog')}}">Blog </a></li>                                    
                                 <li><a href="{{route('contact')}}">Contact</a></li>
-                                <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
+                                <li><a href="{{route('account')}}">My Account<i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="#">Dashboard</a></li>
                                         <li><a href="#">Products</a></li>

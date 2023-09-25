@@ -11,6 +11,6 @@ class BlogController extends Controller
     }
 
     public function detail(){
-        return view('blog_detail');
+        return view('SubPages.blog_detail');
     }
 }
