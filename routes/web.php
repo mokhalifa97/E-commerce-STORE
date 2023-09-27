@@ -31,6 +31,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about','AboutController@index')->name('about');
 Route::get('/shop','ShopController@index')->name('shop');
+Route::get('/product/{id}','DetailsController@show')->name('details.product');
 Route::get('/blog','BlogController@index')->name('blog');
 Route::get('/blog/detail','BlogController@detail')->name('blog.detail');
 Route::get('/contact','ContactController@index')->name('contact');
