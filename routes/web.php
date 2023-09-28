@@ -8,9 +8,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/cart', function () {
-    return view('SubPages.cart');
-})->name('cart');
+// Route::get('/cart', function () {
+//     return view('SubPages.cart');
+// })->name('cart');
 
 Route::get('/checkout', function () {
     return view('SubPages.checkOut');
@@ -36,5 +36,7 @@ Route::get('/blog','BlogController@index')->name('blog');
 Route::get('/blog/detail','BlogController@detail')->name('blog.detail');
 Route::get('/contact','ContactController@index')->name('contact');
 Route::get('/account','AccountController@index')->name('account');
+
+Route::get('/cart', 'CartController@index')->name('cart');
 
 Route::get('/admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');

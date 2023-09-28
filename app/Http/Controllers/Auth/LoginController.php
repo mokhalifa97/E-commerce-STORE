@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -47,6 +48,7 @@ class LoginController extends Controller
         ]);
 
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
+        // if(Auth::check())
         {
             if (auth()->user()->is_admin == 1) {
                 return redirect()->route('admin.home');
@@ -54,7 +56,7 @@ class LoginController extends Controller
                 return redirect()->route('home');
             }
         }else{
-            return redirect()->route('login')->with('error','Email-Address And Password Are Wrong.');
+            return redirect()->route('login')->with('error','Email or Password is wrong');
         }
     }
 }
