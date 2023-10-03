@@ -1,16 +1,12 @@
 <?php
 
+use App\Http\Controllers;
+use \App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('home');
-});
-
-// Route::get('/cart', function () {
-//     return view('SubPages.cart');
-// })->name('cart');
+// Route::get('/',Home::class);
 
 Route::get('/checkout', function () {
     return view('SubPages.checkOut');
@@ -28,7 +24,9 @@ Route::get('/terms', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home',HomeComponent::class)->name('home');
+
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about','AboutController@index')->name('about');
 Route::get('/shop','ShopController@index')->name('shop');
 Route::get('/product/{id}','DetailsController@show')->name('details.product');

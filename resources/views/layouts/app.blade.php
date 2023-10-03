@@ -31,7 +31,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/theme/favicon.ico') }}">
     <link rel="stylesheet" href=" {{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href=" {{ asset('assets/css/custom.css') }}">
+    @livewireStyles
 </head>
+
 
 
 <body>
@@ -41,6 +43,8 @@
         </main>
     </div>
 </body>
+
+
 
     <!-- Vendor JS-->
     <script src=" {{ asset('assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
@@ -66,5 +70,5 @@
     <!-- Template  JS -->
     <script src=" {{ asset('assets/js/main.js?v=3.3') }}"></script>
     <script src=" {{ asset('assets/js/shop.js?v=3.3"></scr') }}"></script></body>
-    
+    @livewireScripts
 </html>
