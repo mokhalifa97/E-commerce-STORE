@@ -32,8 +32,10 @@
     <link rel="stylesheet" href=" {{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href=" {{ asset('assets/css/custom.css') }}">
     @livewireStyles
+    @livewireScripts
 </head>
 
+    <!-- Navbar -->
 <header class="header-area header-style-1 header-height-2">
     <div class="header-top header-top-ptb-1 d-none d-lg-block">
         <div class="container">
@@ -121,7 +123,7 @@
                                 </a>
                             </div>
                             <div class="header-action-icon-2">
-                                <a class="mini-cart-icon" href="cart.html">
+                                <a class="mini-cart-icon" href="{{route('cart')}}">
                                     <img alt="Surfside Media" src="{{ asset('assets/imgs/theme/icons/icon-cart.svg') }}">
                                     <span class="pro-count blue">2</span>
                                 </a>
@@ -157,8 +159,8 @@
                                             <h4>Total <span>$4000.00</span></h4>
                                         </div>
                                         <div class="shopping-cart-button">
-                                            <a href="cart.html" class="outline">View cart</a>
-                                            <a href="checkout.html">Checkout</a>
+                                            <a href="{{route('cart')}}" class="outline">View cart</a>
+                                            <a href="{{route('checkOut')}}">Checkout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -618,17 +620,16 @@
 </div> 
 
 
-{{-- {{$slot}} --}}
+    <!-- pages cnotent -->
 
-
-<body>
     <div id="app">
         <main >
             @yield('content')
         </main>
     </div>
-</body>
 
+
+    <!-- Footer -->
 <footer class="main">
     <section class="newsletter p-30 text-white wow fadeIn animated">
         <div class="container">
@@ -765,5 +766,5 @@
     <!-- Template  JS -->
     <script src=" {{ asset('assets/js/main.js?v=3.3') }}"></script>
     <script src=" {{ asset('assets/js/shop.js?v=3.3"></scr') }}"></script></body>
-    @livewireScripts
+   
 </html>

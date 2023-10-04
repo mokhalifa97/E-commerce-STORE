@@ -21,7 +21,7 @@ Route::get('/cart',Cart::class)->name('cart');
 
 Route::get('/checkout', function () {
     return view('SubPages.checkOut');
-});
+})->name('checkOut');;
 
 Route::get('/privacy', function () {
     return view('SubPages.privacy');

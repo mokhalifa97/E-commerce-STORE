@@ -6,6 +6,11 @@ use Livewire\Component;
 
 class Contact extends Component
 {
+
+    public function index(){
+        dd('welcome');
+    }
+    
     public function render()
     {
         return view('livewire.contact');
