@@ -1,6 +1,4 @@
-@extends('layouts.app')
 @section('content')
-@include('layouts.Navbar')
 
 <main class="main">
     <div class="page-header breadcrumb-wrap">
@@ -55,5 +53,4 @@
         </div>
     </section>
 </main>
-@include('layouts.Footer')
 @endsection

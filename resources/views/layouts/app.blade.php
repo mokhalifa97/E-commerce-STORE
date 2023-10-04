@@ -618,16 +618,16 @@
 </div> 
 
 
-{{$slot}}
+{{-- {{$slot}} --}}
 
 
-{{-- <body>
+<body>
     <div id="app">
         <main >
             @yield('content')
         </main>
     </div>
-</body> --}}
+</body>
 
 <footer class="main">
     <section class="newsletter p-30 text-white wow fadeIn animated">

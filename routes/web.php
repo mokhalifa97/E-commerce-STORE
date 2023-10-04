@@ -1,14 +1,22 @@
 <?php
 
+use Http\Livewire\Cart;
+use Http\Livewire\Account;
+use Http\Livewire\Contact;
+use Http\Livewire\Blog;
 use Http\Livewire\Shop;
 use Http\Livewire\About;
 use Http\Livewire\Home;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/test',Home::class);
+Route::get('/',Home::class)->name('home');
 Route::get('/about',About::class)->name('about');
 Route::get('/shop',Shop::class)->name('shop');
+Route::get('/blog',Blog::class)->name('blog');
+Route::get('/contact',Contact::class)->name('contact');
+Route::get('/account',Account::class)->name('account');
+Route::get('/cart',Cart::class)->name('cart');
 
 
 Route::get('/checkout', function () {
@@ -27,15 +35,9 @@ Route::get('/terms', function () {
 
 Auth::routes();
 
-Route::get('/', 'Http\Controllers\HomeController@index')->name('home');
-// Route::get('/about','Http\Controllers\AboutController@index')->name('about');
-// Route::get('/shop','Http\Controllers\ShopController@index')->name('shop');
-Route::get('/product/{id}','Http\Controllers\DetailsController@show')->name('details.product');
-Route::get('/blog','Http\Controllers\BlogController@index')->name('blog');
-Route::get('/blog/detail','Http\Controllers\BlogController@detail')->name('blog.detail');
-Route::get('/contact','Http\Controllers\ContactController@index')->name('contact');
-Route::get('/account','Http\Controllers\AccountController@index')->name('account');
 
-Route::get('/cart', 'Http\Controllers\CartController@index')->name('cart');
+Route::get('/product/{id}','Http\Controllers\DetailsController@show')->name('details.product');
+Route::get('/blog/detail','Http\Controllers\BlogController@detail')->name('blog.detail');
+
 
 Route::get('/admin/home', 'Http\Controllers\HomeController@adminHome')->name('admin.home')->middleware('is_admin');

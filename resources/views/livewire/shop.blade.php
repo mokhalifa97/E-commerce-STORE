@@ -1,3 +1,4 @@
+@section('content')
 <main class="main">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
@@ -104,6 +105,7 @@
 
                     <!--pagination-->
                     <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
+                        {{ $products->links() }}
                         
                         {{-- <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-start">
@@ -234,3 +236,4 @@
         </div>
     </section>
 </main>
+@endsection

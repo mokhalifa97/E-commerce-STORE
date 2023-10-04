@@ -1,6 +1,4 @@
-@extends('layouts.app')
 @section('content')
-
 <main class="main">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
@@ -399,5 +397,4 @@
         </div>
     </section>
 </main>
-
 @endsection

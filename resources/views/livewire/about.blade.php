@@ -1,3 +1,5 @@
+@section('content')
+
 <main class="main single-page">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
@@ -159,3 +161,4 @@
         </div>
     </section>
 </main>
+@endsection

@@ -1,3 +1,5 @@
+@section('content')
+
 <main class="main">
     <section class="home-slider position-relative pt-50">
         <div class="hero-slider-1 dot-style-1 dot-style-1-position-1">
@@ -1391,3 +1393,4 @@
     </section>
     
 </main>
+@endsection
