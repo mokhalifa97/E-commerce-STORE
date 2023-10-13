@@ -425,7 +425,7 @@
                                 <li><a href="{{route('contact')}}">Contact</a></li>
                                 <li><a href="{{route('account')}}">My Account<i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Dashboard</a></li>
+                                        <li><a href="{{route('account')}}">Dashboard</a></li>
                                         <li><a href="#">Products</a></li>
                                         <li><a href="#">Categories</a></li>
                                         <li><a href="#">Coupons</a></li>

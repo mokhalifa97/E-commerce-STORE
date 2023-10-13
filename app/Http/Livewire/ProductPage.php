@@ -20,6 +20,7 @@ class ProductPage extends Component
         $product= Product::find($this->productId);
         $Rproduct= Product::where('category_id',$product->category_id)->inRandomOrder()->limit(4)->get();
         $Nproduct= Product::latest()->take(4)->get();
+        
         return view('livewire.product-page',['product' =>$product,'rproducts'=>$Rproduct,'nproducts'=>$Nproduct]);
     }
 }

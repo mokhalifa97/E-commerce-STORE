@@ -1,15 +1,12 @@
 <div>
 
-
-
-
 <main class="main">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
             <div class="breadcrumb">
                 <a href="{{route('home')}}" rel="nofollow">Home</a>
                 <span></span> Blog
-                <span></span> Technology
+                
             </div>
         </div>
     </div>
@@ -40,7 +37,7 @@
                                     </div>
                                     <div class="entry-content">
                                         <div class="entry-meta meta-1 mb-30">
-                                            <a class="entry-meta meta-0" href="blog.html"><span class="post-in background4 text-brand font-xs">Mobile Phone</span></a>
+                                            <a class="entry-meta meta-0" href="{{route('blog.detail')}}"><span class="post-in background4 text-brand font-xs">Mobile Phone</span></a>
                                             <div class="font-sm">
                                                 <span><span class="mr-10 text-muted"><i class="fi-rs-eye"></i></span>23k</span>
                                                 <span class="ml-30"><span class="mr-10 text-muted"><i class="fi-rs-comment-alt"></i></span>17k</span>
@@ -48,7 +45,7 @@
                                             </div>
                                         </div>
                                         <h2 class="post-title mb-20">
-                                            <a href="blog-details.html">Barcelona: marathan; south korean pulls away for a grueling surprise</a></h2>
+                                            <a href="{{route('blog.detail')}}">Barcelona: marathan; south korean pulls away for a grueling surprise</a></h2>
                                         <p class="post-exerpt font-medium text-muted mb-30">These people envy me for having a lifestyle they don’t have, but the truth is, sometimes I envy their lifestyle instead. Struggling to sell one multi-million dollar home currently.</p>
                                         <div class="mb-20 entry-meta meta-2">
                                             <div class="font-xs ">
@@ -209,7 +206,8 @@
                         </div>
                     </div>
                     <!--post-grid-->
-                    <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
+                    
+                    {{-- <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-start">
                                 <li class="page-item active"><a class="page-link" href="#">01</a></li>
@@ -220,7 +218,7 @@
                                 <li class="page-item"><a class="page-link" href="#"><i class="fi-rs-angle-double-small-right"></i></a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-lg-3 primary-sidebar sticky-sidebar">
                     <div class="widget-area">
