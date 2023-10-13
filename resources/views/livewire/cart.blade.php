@@ -1,7 +1,6 @@
-@section('content')
-<?php 
-use Darryldecode\Cart\Cart;
-?>
+<div>
+
+
 <main class="main">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
@@ -401,4 +400,4 @@ use Darryldecode\Cart\Cart;
         </div>
     </section>
 </main>
-@endsection
+</div>

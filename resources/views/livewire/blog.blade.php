@@ -1,4 +1,6 @@
-@section('content')
+<div>
+
+
 
 
 <main class="main">
@@ -355,4 +357,4 @@
     </section>
 </main>
 
-@endsection
+</div>

@@ -1,5 +1,6 @@
 <?php
 
+use Http\Livewire\ProductPage;
 use Http\Livewire\Cart;
 use Http\Livewire\Account;
 use Http\Livewire\Contact;
@@ -17,6 +18,7 @@ Route::get('/blog',Blog::class)->name('blog');
 Route::get('/contact',Contact::class)->name('contact');
 Route::get('/account',Account::class)->name('account');
 Route::get('/cart',Cart::class)->name('cart');
+Route::get('/product/{id}',ProductPage::class)->name('product');
 
 
 Route::get('/checkout', function () {
@@ -36,7 +38,7 @@ Route::get('/terms', function () {
 Auth::routes();
 
 
-Route::get('/product/{id}','Http\Controllers\DetailsController@show')->name('details.product');
+// Route::get('/product/{id}','Http\Controllers\DetailsController@show')->name('details.product');
 Route::get('/blog/detail','Http\Controllers\BlogController@detail')->name('blog.detail');
 
 

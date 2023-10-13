@@ -32,7 +32,6 @@
     <link rel="stylesheet" href=" {{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href=" {{ asset('assets/css/custom.css') }}">
     @livewireStyles
-    @livewireScripts
 </head>
 
     <!-- Navbar -->
@@ -106,7 +105,7 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="index.html"><img src=" {{ asset ('assets/imgs/logo/logo.png') }}" alt="logo"></a>
+                    <a href="{{route('home')}}"><img src=" {{ asset ('assets/imgs/logo/logo.png') }}" alt="logo"></a>
                 </div>
                 <div class="header-right">
                     <div class="search-style-1">
@@ -622,11 +621,12 @@
 
     <!-- pages cnotent -->
 
-    <div id="app">
+    {{-- <div id="app">
         <main >
             @yield('content')
         </main>
-    </div>
+    </div> --}}
+    {{$slot}}
 
 
     <!-- Footer -->
@@ -765,6 +765,9 @@
     <script src=" {{ asset('assets/js/plugins/jquery.elevatezoom.js') }}"></script>
     <!-- Template  JS -->
     <script src=" {{ asset('assets/js/main.js?v=3.3') }}"></script>
-    <script src=" {{ asset('assets/js/shop.js?v=3.3"></scr') }}"></script></body>
-   
+    <script src=" {{ asset('assets/js/shop.js?v=3.3"></scr') }}"></script>
+
+
+@livewireScripts
+</body>
 </html>
