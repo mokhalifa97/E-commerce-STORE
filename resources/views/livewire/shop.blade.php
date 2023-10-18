@@ -96,7 +96,7 @@
                                                 {{-- <span class="old-price">$245.8</span> --}}
                                             </div>
                                             <div class="product-action-1 show">
-                                                <a aria-label="Add To Cart" class="action-btn hover-up" wire:click="store"
+                                                <a aria-label="Add To Cart" class="action-btn hover-up" wire:click="addToCart({{ $product->id }})"
                                                 ><i class="fi-rs-shopping-bag-add"></i></a>
                                             </div>
                                         </div>
@@ -106,10 +106,11 @@
                             </div>
 
                             <!--pagination-->
-                            <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
+                            
+                            {{-- <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
                                 {{ $products->links('pagination::bootstrap-4') }}
                                 
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-lg-3 primary-sidebar sticky-sidebar">
                             <div class="row">

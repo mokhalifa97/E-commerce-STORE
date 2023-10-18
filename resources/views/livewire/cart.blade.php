@@ -20,6 +20,7 @@
                         
                         <table class="table shopping-summery text-center clean">
                             <thead>
+                                @if (count($cartItems) >0)
                                 <tr class="main-heading">
                                     <th scope="col">Image</th>
                                     <th scope="col">Name</th>
@@ -30,11 +31,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- @if ($product->id) --}}
+                                @else
+                                    <div class="alert alert-danger text-cneter">NO Itmes In Cart</div>
+                                @endif
 
                                 @foreach ($cartItems as $item)
                                 <tr>
-                                    <td class="image product-thumbnail"><img src="assets/imgs/shop/product-1-2.jpg" alt="#"></td>
+                                    <td class="image product-thumbnail"><img src="{{ asset('assets/imgs/shop/product-')}}{{$item->id}}-1.jpg" alt="{{ $item->name }}"></td>
                                     <td class="product-des product-name">
                                         <h5 class="product-name"><a href="product-details.html"></a>{{ $item->name }}</h5>
                                         {{-- <p class="font-xs">Maboriosam in a tonto nesciung eget<br> distingy magndapibus.
@@ -55,9 +58,7 @@
                                 </tr>
                                 @endforeach
 
-                                {{-- @else
-                                    <div class="alert alert-danger text-cneter">NO Itmes In Cart</div>
-                                @endif --}}
+                                
 
                                 <tr>
                                     <td colspan="6" class="text-end">

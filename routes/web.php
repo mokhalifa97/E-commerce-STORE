@@ -1,8 +1,8 @@
 <?php
 
+use Http\Livewire\CartController;
 use Http\Livewire\BlogDetail;
 use Http\Livewire\ProductPage;
-use Http\Livewire\Cart;
 use Http\Livewire\Account;
 use Http\Livewire\Contact;
 use Http\Livewire\Blog;
@@ -18,7 +18,7 @@ Route::get('/shop',Shop::class)->name('shop');
 Route::get('/blog',Blog::class)->name('blog');
 Route::get('/contact',Contact::class)->name('contact');
 Route::get('/account',Account::class)->name('account');
-Route::get('/cart',Cart::class)->name('cart');
+Route::get('/cart',CartController::class)->name('cart');
 Route::get('/product/{id}',ProductPage::class)->name('product');
 Route::get('/blog-detail',BlogDetail::class)->name('blog.detail');
 

@@ -3,9 +3,10 @@
 namespace App\Http\Livewire;
 
 use App\Model\Product;
-use Darryldecode\Cart\Facades\CartFacade;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Darryldecode\Cart\Cart;
+
 
 
 
@@ -14,22 +15,23 @@ class Shop extends Component
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
 
-    public function store(){
-        // $product=Product::find($product_id);
-        // CartFacade::add([
-        //     'id' => $product->id,
-        //     'name' => $product->name,
-        //     'price' => $product->price,
-        // ]);
-        // session()->flash('success', 'Item added to cart successfully!');
-        // return redirect()->route('cart');
-        dd('whats');
-
+    public function addToCart($productId)
+    {
+        $Product = Product::find($productId);
+        \Cart::add([
+            'id' => $Product->id,
+            'name' => $Product->name,
+            'price' => $Product->regular_price,
+            'qty' => $Product->quantity,
+            
+        ]);
+        return redirect()->route('cart');
     }
 
     public function render()
     {
-        $product= Product::paginate(6);
-        return view('livewire.shop',['products'=>$product]);
+        // $this->products= Product::paginate(6);
+        $products= Product::all();
+        return view('livewire.shop', ['products'=>$products]);
     }
 }
