@@ -1,11 +1,11 @@
-<div>
 
+<div>
 
 <main class="main">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
             <div class="breadcrumb">
-                <a href="index.html" rel="nofollow">Home</a>
+                <a href="{{route('home')}}" rel="nofollow">Home</a>
                 <span></span> Shop
                 <span></span> Your Cart
             </div>
@@ -52,9 +52,9 @@
                                         </div>
                                     </td>
                                     <td class="text-right" data-title="Cart">
-                                        <span>$65.00 </span>
+                                        <span>${{ $item->price }} </span>
                                     </td>
-                                    <td class="action" data-title="Remove"><a href="#" class="text-muted"><i class="fi-rs-trash"></i></a></td>
+                                    <td class="action" data-title="Remove"><a wier:click='delete' class="text-muted"><i class="fi-rs-trash"></i></a></td>
                                 </tr>
                                 @endforeach
 
@@ -379,7 +379,11 @@
                                         <tbody>
                                             <tr>
                                                 <td class="cart_total_label">Cart Subtotal</td>
-                                                <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">$240.00</span></td>
+                                                <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">${{Cart::subtotal()}}</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cart_total_label">Tax</td>
+                                                <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">${{Cart::tax()}}</span></td>
                                             </tr>
                                             <tr>
                                                 <td class="cart_total_label">Shipping</td>
@@ -387,7 +391,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="cart_total_label">Total</td>
-                                                <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">$240.00</span></strong></td>
+                                                <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">${{Cart::total()}}</span></strong></td>
                                             </tr>
                                         </tbody>
                                     </table>

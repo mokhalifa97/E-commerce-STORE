@@ -14,16 +14,20 @@ class CartController extends Component
 {
 
     public $cartItems;
-    public $cartItem=[];
 
     public function mount()
     {
         $this->cartItems = Cart::content();
     }
 
+    public function delete(){
+        dd('win today');
+    }
+
     public function render()
     {
-        
-        return view('livewire.cart');
+        $subTotal = Cart::subtotal();
+
+        return view('livewire.cart',["sub" => $subTotal]);
     }
 }

@@ -5,7 +5,9 @@ namespace App\Http\Livewire;
 use App\Model\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Darryldecode\Cart\Cart;
+// use Darryldecode\Cart\Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
+
 
 
 
@@ -18,7 +20,7 @@ class Shop extends Component
     public function addToCart($productId)
     {
         $Product = Product::find($productId);
-        \Cart::add([
+        Cart::add([
             'id' => $Product->id,
             'name' => $Product->name,
             'price' => $Product->regular_price,
