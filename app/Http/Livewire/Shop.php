@@ -24,7 +24,7 @@ class Shop extends Component
             'id' => $Product->id,
             'name' => $Product->name,
             'price' => $Product->regular_price,
-            'qty' => $Product->quantity,
+            'qty' => '1',
             
         ]);
         return redirect()->route('cart');

@@ -18,16 +18,28 @@ class CartController extends Component
     public function mount()
     {
         $this->cartItems = Cart::content();
+        // dd($this->cartItems = Cart::content());
     }
 
-    public function delete(){
-        dd('win today');
+    public function decreaseQuantity($rowId){
+        $product= Cart::get($rowId);
+        $qty=-1;
+        Cart::update($rowId,$qty);
+    }
+
+    public function increaseQuantity($rowId){
+        $product= Cart::get($rowId);
+        $qty =+1;
+        Cart::update($rowId,$qty);
+    }
+
+    public function remove($rowId){
+        Cart::remove($rowId);
+        session()->flash('success', 'item deleted successfully');
     }
 
     public function render()
     {
-        $subTotal = Cart::subtotal();
-
-        return view('livewire.cart',["sub" => $subTotal]);
+        return view('livewire.cart');
     }
 }
